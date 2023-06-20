@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="">
     <title>Document</title>
 </head>
 
@@ -35,61 +34,70 @@
             <div></div>
             <div></div>
             <div></div>
+            <button>
+                <i class="fa-solid fa-download"></i>Descargar meme
+            </button>
         </div>
     </main>
     <aside>
         <div class="aside-image">
             <i class="fa-solid fa-xmark"></i>
             <h2>IMAGEN</h2>
-            <label for="">
+            <label for="url">
                 URL
-                <input type="url">
+                <input type="url" name="url" id="url">
             </label>
-            <label for="">
+            <label for="color-background">
                 FONDO
-                <input type="color" name="" id="">
-                <select name="select">
-                    <option value="value1">Value 1</option>
-                    <option value="value2" selected>Value 2</option>
-                    <option value="value3">Value 3</option>
+                <div>
+                    <input type="color" name="color-background" id="color-background" value="#ffffff">
+                    <span></span>
+                </div>
+                <select name="select-type-background">
+                    <option value="ninguno" selected>Ninguno</option>
+                    <option value="aclarar">Aclarar</option>
+                    <option value="oscurecer">Oscurecer</option>
+                    <option value="diferencia">Diferencia</option>
+                    <option value="luminosidad">Luminosidad</option>
+                    <option value="multiplicar">Multiplicar</option>
                 </select>
             </label>
             <h3>FILTROS</h3>
-            <label for="">
+            <label for="brigthness">
                 BRILLO
-                <input type="range" name="" id="">
+                <input type="range" name="brigthness" id="brigthness" min="0" max="1" step="0.1" value="1">
             </label>
-            <label for="">
+            <label for="opacity">
                 OPACIDAD
-                <input type="range" name="" id="">
+                <input type="range" name="opacity" id="opacity" min="0" max="1" step="0.1" value="1">
             </label>
-            <label for="">
+            <label for="contrast">
                 CONTASTE
-                <input type="range" name="" id="">
+                <input type="range" name="contrast" id="contrast" min="100" max="1000" step="1" value="100">
             </label>
-            <label for="">
+            <label for="blur">
                 DESENFOQUE
-                <input type="range" name="" id="">
+                <input type="range" name="blur" id="blur" min="0" max="10" step="0.1" value="0">
             </label>
-            <label for="">
+            <label for="grayscale">
                 ESCALA DE GRISES
-                <input type="range" name="" id="">
+                <input type="range" name="grayscale" id="grayscale" min="0" max="100" step="1" value="0">
             </label>
-            <label for="">
+            <label for="sepia">
                 SEPIA
-                <input type="range" name="" id="">
+                <input type="range" name="sepia" id="sepia" min="0" max="100" step="1" value="0">
             </label>
-            <label for="">
+            <label for="hue-rotation">
                 HUE
-                <input type="range" name="" id="">
+                <input type="range" name="hue-rotation" id="hue-rotation" min="0" max="359" step="1" value="0">
             </label>
-            <label for="">
+            <label for="saturation">
                 SATURADO
-                <input type="range" name="" id="">
+                <input type="range" name="saturation" id="saturation" min="100" max="1000" step="10" value="100">
             </label>
-            <label for="">
+            <label for="invert">
                 NEGATIVO
-                <input type="range" name="" id="">
+                <input type="range" name="invert" id="invert" min="0" max="1" step="0.1" value="0">
             </label>
             <button>
                 Reestablecer filtros
@@ -98,62 +106,72 @@
         <div class="aside-texto">
             <i class="fa-solid fa-xmark"></i>
             <h2>TEXTO</h2>
-            <label for="">
+            <label for="top-text">
                 SUPERIOR
-                <input type="text">
+                <textarea id="top-text">TOP TEXT</textarea>
             </label>
-            <label>
-                <input type="checkbox" id="cbox1" value="first_checkbox"> Sin texto superior
+            <label for="checkbox-top-text">
+                <input type="checkbox" name="checkbox-top-text" id="checkbox-top-text"> Sin texto superior
             </label>
-            <label for="">
+            <label for="bottom-text">
                 INFERIOR
-                <input type="text">
+                <textarea name="bottom-text" id="bottom-text">BOTTOM TEXT</textarea>
             </label>
-            <label>
-                <input type="checkbox" id="cbox1" value="first_checkbox"> Sin texto inferior
+            <label for="checkbox-bottom-text">
+                <input type="checkbox" name="checkbox-bottom-text" id="checkbox-bottom-text"> Sin texto inferior
             </label>
-            <label for="">
+            <label for="select-font-family">
                 FUENTE
-                <select name="select">
-                    <option value="value1">Value 1</option>
-                    <option value="value2" selected>Value 2</option>
-                    <option value="value3">Value 3</option>
+                <select name="select-font-family" id="select-font-family">
+                    <option value="arial">Arial</option>
+                    <option value="arial black">Arial Black</option>
+                    <option value="american typewriter">American Typewriter</option>
+                    <option value="andale mono">Andale Mono</option>
+                    <option value="comic sans ms">Comic Sans MS</option>
+                    <option value="helvetica">Helvetica</option>
+                    <option value="impact" selected>Impact</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="times new roman">Times New Roman</option>
                 </select>
             </label>
             <div>
-                <input type="number">
+                <input type="number" name="font-size" value="25">
                 <button><i class="fa-solid fa-align-left"></i></button>
                 <button><i class="fa-solid fa-align-center"></i></button>
                 <button><i class="fa-solid fa-align-right"></i></button>
             </div>
             <div>
-                <label for="">
+                <label for="color-text">
                     COLOR
-                    <input type="color">
+                    <div>
+                        <input type="color" name="color-text" id="color-text" value="#000000">
+                        <span></span>
+                    </div>
                 </label>
-                <label>
+                <label for="color-text-background">
                     FONDO
-                    <input type="color">
+                    <div>
+                        <input type="color" name="color-text-background" id="color-text-background" value="#ffffff">
+                        <span></span>
+                    </div>
                 </label>
             </div>
-            <label for="">
-                <input type="checkbox" id="cbox1" value="first_checkbox"> Fondo transparente
+            <label for="background-visibility">
+                <input type="checkbox" name="background-visibility" id="background-visibility"> Fondo transparente
             </label>
-            <label for="">
                 CONTORNO
                 <div>
                     <button>Ninguno</button>
                     <button>Claro</button>
                     <button>Oscuro</button>
                 </div>
-            </label>
-            <label for="">
+            <label for="text-spacing">
                 ESPACIADO
-                <input type="number">
+                <input type="number" name="text-spacing" id="text-spacing" value="10">
             </label>
-            <label for="">
+            <label for="text-line-spacing">
                 INTERLINEADO
-                <input type="number">
+                <input type="number"  name="text-line-spacing" id="text-line-spacing" value="1.2">
             </label>
         </div>
     </aside>

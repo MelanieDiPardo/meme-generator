@@ -6,12 +6,14 @@
     margin: 0;
     box-sizing: border-box;
     --color-header: #171d2b;
-    --color-main: #363942;
+    --color-main: #32353f;
     --color-aside: #21242d;
     --color-botones-input: #31353e;
     --color-botones-input-hover: #4e5565;
-    --color-texto: #ffffff;
+    --color-texto-fondo: #ffffff;
+    --color-meme-fondo: rgb(0, 0, 0);
     --texto-principal: 'Noto Sans', sans-serif;
+    --color-boton-descarga: rgb(11, 116, 11);
     font-family: var(--texto-principal);
 }
 
@@ -35,18 +37,19 @@ p, span, label{
 
 .page-header{
     background-color: var(--color-header);
-    color: var(--color-texto);
+    color: var(--color-texto-fondo);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     padding: 10px;
-    border-bottom: 1px solid rgb(184, 184, 184);
+    border-bottom: 1px solid rgb(186, 183, 183);
 }
 
 .page-title{
     font-size: 1.5rem;
+
 }
 
 .page-controls{
@@ -57,10 +60,54 @@ p, span, label{
 }
 
 .page-controls-links{
-    color: var(--color-texto);
+    color: var(--color-texto-fondo);
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Main de la pagina */
+
+.page-main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px ;
+    background-color: var(--color-main);
+    padding: 50px 20px;
+}
+
+.meme{
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-meme-fondo);
+
+}
+
+.meme-text{
+    background-color: var(--color-texto-fondo);
+    width: 100%;
+    height: 10%;
+}
+
+.download-button{
+    background-color: var(--color-boton-descarga);
+    height: 50px;
+    width: 160px;
+    color: var(--color-texto-fondo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+    border: 1px solid var(--color-boton-descarga);
+    border-radius: 4px ;
+}
+

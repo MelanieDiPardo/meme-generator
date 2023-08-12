@@ -21,7 +21,7 @@ let memeImage = document.querySelector(".meme-image");
 let url = document.getElementById("url");
 
 const escribiendoUrl = (event) => {
-    memeImage.src = event.target.value;
+    memeImage.style.backgroundImage = `url(${event.target.value})`;
 }
 
 url.addEventListener('input', (event) => escribiendoUrl(event))
@@ -69,7 +69,7 @@ let saturationRange = document.getElementById("saturation")
 let invertRange = document.getElementById("invert")
 
 function changeFilters(){
-    memeImage.style.filter = `brightness(${brightnessRange.value}) opacity(${opacityRange.value}%) contrast(${contrastRange.value}%) blur(${blurRange.value}px) grayscale(${grayscaleRange.value}%) sepia(${sepiaRange.value}%) hue-rotate(${hueRange.value}deg) saturate(${saturationRange.value}%) invert(${invertRange.value}%)`
+    memeImage.style.filter = `brightness(${brightnessRange.value}) opacity(${opacityRange.value}) blur(${blurRange.value}px) contrast(${contrastRange.value}%) grayscale(${grayscaleRange.value}%) hue-rotate(${hueRange.value}deg) sepia(${sepiaRange.value}%) saturate(${saturationRange.value}%) invert(${invertRange.value})`
 }
 
 // Color pickers para el color del texto y su background 
